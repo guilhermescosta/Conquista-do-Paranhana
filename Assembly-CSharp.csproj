@@ -51,8 +51,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\InteracaoNPC.cs" />
+     <Compile Include="Assets\Scripts\InteracaoGold.cs" />
+     <Compile Include="Assets\Scripts\InteracaoNPC.cs" />
      <Compile Include="Assets\Scripts\InteracaoObjeto.cs" />
+     <Compile Include="Assets\Scripts\LevelManager.cs" />
      <Compile Include="Assets\Scripts\Menu.cs" />
      <Compile Include="Assets\Scripts\movimento.cs" />
      <Compile Include="Assets\Scripts\PassaDeFase.cs" />
