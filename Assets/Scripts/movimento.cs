@@ -5,6 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class movimento : MonoBehaviour {
 
+	public int exit;
+
+	void Start(){
+		DontDestroyOnLoad (this);
+		Debug.Log (exit);
+	}
+
 	void FixedUpdate () {
 
 		if (Input.GetKey (KeyCode.DownArrow)) {
