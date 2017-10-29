@@ -5,17 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class PassaDeFase : MonoBehaviour {
 
-	public movimento _mov;
+	public Movimento _mov;
 	public GameObject _player;
 	public GameObject playerStart;   // posicao de saida
 
 	// Use this for initialization
 	void Start () {
 		_player = GameObject.Find ("Player");
-		_mov= _player.GetComponent<movimento> ();
+		_mov= _player.GetComponent<Movimento> ();
 
 		if (_mov.exit==1){
-			Debug.Log ("AEEEEEEEEE");
 			_player.transform.position = new Vector3 (-4, 0, 0);
 		}
 	}
@@ -31,7 +30,6 @@ public class PassaDeFase : MonoBehaviour {
 		if (other.gameObject.CompareTag("Player"))
 		{
 			_mov.exit = 1;
-		//	Debug.Log (other.name);
 			SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex + 1);
 
 		}

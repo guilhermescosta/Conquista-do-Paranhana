@@ -9,6 +9,7 @@ public class InteracaoNPC : MonoBehaviour {
 	public string[] phrases;
 	public Text phrasesText;
 	public int indexPhrase;
+	public Text talkText;
 
 	/*void Start() {
 		indexPhrase = 0;
@@ -30,10 +31,12 @@ public class InteracaoNPC : MonoBehaviour {
 	void FixedUpdate(){
 		if (isTalk && Input.GetKeyDown (KeyCode.E) && indexPhrase <= phrases.Length - 1) {
 			phrasesText.text = phrases [indexPhrase];
-			talkBalloon.SetActive (true);
+			talkBalloon.GetComponent<Image> ().enabled = true;
 			indexPhrase++;
 		} else if (isTalk  && Input.GetKeyDown (KeyCode.E) && indexPhrase >= phrases.Length - 1){
-			talkBalloon.SetActive (false);
+			talkBalloon.GetComponent<Image> ().enabled = false;
+			talkText = talkBalloon.GetComponentInChildren<Text> ();
+			talkText.text = "";
 		}
 	}
 }
