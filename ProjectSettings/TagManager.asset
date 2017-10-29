@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Objeto
   - NPC
+  - Gold
+  - Tronco
   layers:
   - Default
   - TransparentFX

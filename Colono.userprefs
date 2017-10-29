@@ -1,13 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\InteracaoNPC.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\LevelManager.cs">
     <Files>
-      <File FileName="Assets\Scripts\PassaDeFase.cs" Line="20" Column="4" />
-      <File FileName="Assets\Scripts\movimento.cs" Line="17" Column="18" />
-      <File FileName="Assets\Scripts\InteracaoObjeto.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\LevelManager.cs" Line="1" Column="1" />
-      <File FileName="E:\colono-master\Assets\InteracaoNPC.cs" Line="27" Column="19" />
-      <File FileName="Assets\Scripts\InteracaoNPC.cs" Line="36" Column="34" />
+      <File FileName="Assets\Scripts\InteracaoGold.cs" Line="30" Column="43" />
+      <File FileName="Assets\Scripts\Movimento.cs" Line="17" Column="41" />
+      <File FileName="Assets\Scripts\LevelManager.cs" Line="59" Column="16" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
