@@ -7,16 +7,19 @@ public class Movimento : MonoBehaviour {
 
 	public int exit;
 	public GameObject talkBalloon;
+	public GameObject shopPanel;
 
 	void Start(){
 		DontDestroyOnLoad (this);
-		Debug.Log (exit);
+//		Debug.Log (exit);
 		talkBalloon = GameObject.Find ("Balao");
+		shopPanel = GameObject.Find ("Panel");
+
 	}
 
 	void FixedUpdate () {
 
-		if (talkBalloon.GetComponent<Image>().enabled==false) {
+		if (talkBalloon.GetComponent<Image>().enabled==false && shopPanel.GetComponent<Image>().enabled==false ) {
 
 			if (Input.GetKey (KeyCode.DownArrow)) {
 				transform.Translate (0, -.1f, 0);

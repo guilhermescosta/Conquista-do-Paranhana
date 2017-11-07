@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{F7C4BE22-0CA8-B080-4298-CDDE19F6FF8B}</ProjectGuid>
+    <ProjectGuid>{514F44AA-568F-3F7D-13F1-D28EA207E6F5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -51,7 +51,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\FloorTriggerZone.cs" />
+     <Compile Include="Assets\Scripts\HeatlhBar.cs" />
      <Compile Include="Assets\Scripts\InteracaoGold.cs" />
+     <Compile Include="Assets\Scripts\InteracaoLoja.cs" />
      <Compile Include="Assets\Scripts\InteracaoNPC.cs" />
      <Compile Include="Assets\Scripts\InteracaoObjeto.cs" />
      <Compile Include="Assets\Scripts\LevelManager.cs" />
@@ -59,6 +62,7 @@
      <Compile Include="Assets\Scripts\Movimento.cs" />
      <Compile Include="Assets\Scripts\PassaDeFase.cs" />
      <Compile Include="Assets\Scripts\splashFade.cs" />
+     <Compile Include="Assets\Scripts\Timer.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

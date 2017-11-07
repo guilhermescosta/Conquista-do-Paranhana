@@ -10,6 +10,10 @@ public class LevelManager : MonoBehaviour {
 	private int Coin = 0;
 	private bool gameOver = false;
 	public Text CoinText;
+	public int iSede;
+	public Text sedeText;
+	public int iFome;
+	public Text fomeText;
 
 
 	// Use this for initialization
@@ -25,13 +29,34 @@ public class LevelManager : MonoBehaviour {
 	{
 		Coin = Coin + x;
 		CoinText.text = Coin.ToString ();
-		Debug.Log (Coin);
 	
+	}
+	public void SetSede(int x)
+	{
+		iSede = iSede - x;
+		sedeText.text = iSede.ToString ();
+
+	}
+	public void SetFome(int x)
+	{
+		iFome = iFome - x;
+		fomeText.text = iFome.ToString ();
+
 	}
 
 	public int GetCoin()
 	{
 		return Coin;
     }
+
+	public int GetSede()
+	{
+		return iSede;
+	}
+
+	public int GetFome()
+	{
+		return iFome;
+	}
 }
 
