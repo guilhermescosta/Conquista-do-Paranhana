@@ -51,12 +51,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\controller.cs" />
      <Compile Include="Assets\Scripts\FloorTriggerZone.cs" />
      <Compile Include="Assets\Scripts\HeatlhBar.cs" />
+     <Compile Include="Assets\Scripts\InteracaoCasa.cs" />
      <Compile Include="Assets\Scripts\InteracaoGold.cs" />
      <Compile Include="Assets\Scripts\InteracaoLoja.cs" />
      <Compile Include="Assets\Scripts\InteracaoNPC.cs" />
      <Compile Include="Assets\Scripts\InteracaoObjeto.cs" />
+     <Compile Include="Assets\Scripts\inventario.cs" />
+     <Compile Include="Assets\Scripts\item.cs" />
      <Compile Include="Assets\Scripts\LevelManager.cs" />
      <Compile Include="Assets\Scripts\Menu.cs" />
      <Compile Include="Assets\Scripts\Movimento.cs" />
