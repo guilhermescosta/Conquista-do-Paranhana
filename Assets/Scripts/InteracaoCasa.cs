@@ -7,6 +7,8 @@ public class InteracaoCasa : MonoBehaviour {
 
 	private bool isHome;
 	public SpriteRenderer _home;
+	public SpriteRenderer insideHome;
+	public SpriteRenderer bed;
 
 	void OnTriggerExit2D (Collider2D other){
 		if (other.gameObject.tag == "Player" && isHome == false) {
@@ -21,17 +23,19 @@ public class InteracaoCasa : MonoBehaviour {
 
 
 	void FixedUpdate (){
-	
+
 		if (isHome) {
 
-			_home.color = Color.black;
+			_home.sortingOrder = 1;
+			insideHome.sortingOrder = 2;
+			//bed.sortingOrder = 3;
 
 		} else {
-		
-			_home.color = Color.white ;
+
+			_home.sortingOrder = 2;
+			insideHome.sortingOrder = 1;
+			//bed.sortingOrder = 1;
 		}
-	
-	
 	}
 
 

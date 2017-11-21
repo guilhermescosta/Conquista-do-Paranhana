@@ -65,6 +65,7 @@
      <Compile Include="Assets\Scripts\Menu.cs" />
      <Compile Include="Assets\Scripts\Movimento.cs" />
      <Compile Include="Assets\Scripts\PassaDeFase.cs" />
+     <Compile Include="Assets\Scripts\Sleep.cs" />
      <Compile Include="Assets\Scripts\splashFade.cs" />
      <Compile Include="Assets\Scripts\Timer.cs" />
  <Reference Include="UnityEngine.UI">

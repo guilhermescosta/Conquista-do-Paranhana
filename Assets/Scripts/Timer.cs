@@ -8,6 +8,8 @@ public class Timer : MonoBehaviour {
 	public float segundos, minutos, horas;
 	public Text Data;
 	public int dia, meses, anos;
+
+
 	//	public GameObject _fundo; 
 	//	public GameObject _cor;
 
@@ -43,6 +45,11 @@ public class Timer : MonoBehaviour {
 			dia++;
 		} if (dia > 31) {
 			meses++;
+			dia = 1;
 		}
 	}
+
+
+
+
 } 
