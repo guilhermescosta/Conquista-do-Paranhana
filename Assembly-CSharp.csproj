@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\controller.cs" />
      <Compile Include="Assets\Scripts\FloorTriggerZone.cs" />
      <Compile Include="Assets\Scripts\HeatlhBar.cs" />
+     <Compile Include="Assets\Scripts\hitarvore.cs" />
      <Compile Include="Assets\Scripts\InteracaoCasa.cs" />
      <Compile Include="Assets\Scripts\InteracaoGold.cs" />
      <Compile Include="Assets\Scripts\InteracaoLoja.cs" />

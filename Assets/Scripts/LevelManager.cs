@@ -25,6 +25,13 @@ public class LevelManager : MonoBehaviour {
 			Destroy (gameObject);
 		}
 	}
+	void Start (){
+		iSede = 100;
+		iFome = 100;
+		CoinText.text = Coin.ToString ();
+		sedeText.text = iSede.ToString ();
+		fomeText.text = iFome.ToString ();
+	}
 	public void SetCoin(int x)
 	{
 		Coin = Coin + x;
