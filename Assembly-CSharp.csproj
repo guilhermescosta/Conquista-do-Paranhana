@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\controller.cs" />
+     <Compile Include="Assets\Scripts\criaçãoPersonagem.cs" />
      <Compile Include="Assets\Scripts\FloorTriggerZone.cs" />
      <Compile Include="Assets\Scripts\HeatlhBar.cs" />
      <Compile Include="Assets\Scripts\hitarvore.cs" />
