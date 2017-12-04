@@ -27,7 +27,7 @@ public class InteracaoCasa : MonoBehaviour {
 		if (isHome) {
 
 			_home.sortingOrder = -1;
-			insideHome.sortingOrder = 2;
+			insideHome.sortingOrder = 1;
 			bed.sortingOrder = 3;
 
 		} else {

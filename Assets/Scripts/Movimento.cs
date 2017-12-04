@@ -8,6 +8,8 @@ public class Movimento : MonoBehaviour {
 	public int exit;
 	public GameObject talkBalloon;
 	public GameObject shopPanel;
+	public GameObject painelFade;
+
 
 	void Start(){
 		DontDestroyOnLoad (this);
@@ -19,7 +21,7 @@ public class Movimento : MonoBehaviour {
 
 	void FixedUpdate () {
 
-		if (talkBalloon.GetComponent<Image>().enabled==false && shopPanel.GetComponent<Image>().enabled==false ) {
+		if (talkBalloon.GetComponent<Image>().enabled==false && shopPanel.GetComponent<Image>().enabled==false && painelFade.GetComponent<Image>().enabled==false   ) {
 
 			if (Input.GetKey (KeyCode.DownArrow)) {
 				transform.Translate (0, -.1f, 0);

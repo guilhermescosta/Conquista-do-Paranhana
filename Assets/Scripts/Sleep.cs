@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Sleep : MonoBehaviour {
 
@@ -16,22 +17,36 @@ public class Sleep : MonoBehaviour {
 
 
 	//fade
+	public Image _fade;
+	private bool fadein;
+	private IEnumerator coroutine;
 
+
+
+
+	//starta setando o alpha em 0 
 	void Start (){
-
 		toSleep = false;
-	}
+		_fade.canvasRenderer.SetAlpha(0.0f);
+		fadein = true;
+		_fade.GetComponent <Image> ().enabled = false;
 
+	}
+	//termina o turno e atualiza a barra de vida
 	void FixedUpdate(){
 
 		if (toSleep && Input.GetKeyDown (KeyCode.E)) {
 			EndTurn ();
+			coroutine = waitForSeconds(1.5f);
+			StartCoroutine(coroutine);
 			UpdateHealthbar ();
-		
+			fadein = true;
 		}
+
 	}
 
-	 void OnTriggerEnter2D (Collider2D other) {
+
+	void OnTriggerEnter2D (Collider2D other) {
 
 		if (other.gameObject.tag == "Player") {
 			Debug.Log ("cama");
@@ -58,16 +73,39 @@ public class Sleep : MonoBehaviour {
 		//CurrentHealth.rectTransform.localScale = new Vector3 (ratio, 1, 1);
 		RatioText.text = (  ratio ).ToString () + '%';
 		Debug.Log ("curou! " + ratio);
-
+	}
+	//enumerador
+	private IEnumerator waitForSeconds(float waitTime)
+	{
+		while (fadein == true)
+		{
+			fadeIn ();
+			yield return new WaitForSeconds(waitTime);
+			fadeOut ();
+			yield return new WaitForSeconds (waitTime);
+			_fade.GetComponent <Image> ().enabled = false;
+		}
 
 	}
-
 	//fade 
+	void fadeIn(){
+		_fade.CrossFadeAlpha (3.0f, 2.5f, false);	
+		_fade.GetComponent <Image> ().enabled = true;
+		Debug.Log ("deu");
+	}
+	void fadeOut(){		
+		_fade.CrossFadeAlpha (0.0f, 2.5f, false);	
 
-
-
-
-
-
-
+		Debug.Log ("nao deu");
+		fadein = false;
+	}
 }
+
+
+
+
+
+
+
+
+
