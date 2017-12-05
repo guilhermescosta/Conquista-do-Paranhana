@@ -11,14 +11,17 @@ public class InteracaoLoja : MonoBehaviour {
 	public Text	phrasesText;
 	public int indexItem;
 	public Text talkText;
-
+	public hitarvore lojaMoeda;
 	public bool isShopping;    // se o jogador estiver com a loja aberta
 	public GameObject cursorLoja;
 	public float cursorPosition;
 
+	public AudioSource _audio;
+
 	void Start(){
 		isShopping = false;
 		cursorPosition = 150;
+		_audio = GetComponent<AudioSource>();
 	}
 
 
@@ -47,6 +50,8 @@ public class InteracaoLoja : MonoBehaviour {
 			shopPanel.GetComponent<Image> ().enabled = true;
 			isShopping = true;
 			cursorLoja.SetActive (true);
+
+			_audio.Play();
 		}
 
 		if (Input.GetKeyDown (KeyCode.UpArrow) && isShopping==true) {  
@@ -84,7 +89,6 @@ public class InteracaoLoja : MonoBehaviour {
 			isShopping = false;
 			cursorLoja.SetActive (false);
 			talkText.text="";
-
 
 		}
 	}

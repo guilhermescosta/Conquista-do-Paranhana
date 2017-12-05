@@ -8,6 +8,8 @@ public class Movimento : MonoBehaviour {
 	public int exit;
 	public GameObject talkBalloon;
 	public GameObject shopPanel;
+	public GameObject painelFade;
+
 
 	void Start(){
 		DontDestroyOnLoad (this);
@@ -15,11 +17,14 @@ public class Movimento : MonoBehaviour {
 		talkBalloon = GameObject.Find ("Balao");
 		shopPanel = GameObject.Find ("Panel");
 
+		Debug.Log (talkBalloon.GetComponent<Image>().enabled);
+		Debug.Log (shopPanel.GetComponent<Image>().enabled);
+		Debug.Log (painelFade.GetComponent<Image>().enabled);
 	}
 
 	void FixedUpdate () {
 
-		if (talkBalloon.GetComponent<Image>().enabled==false && shopPanel.GetComponent<Image>().enabled==false ) {
+		if (talkBalloon.GetComponent<Image>().enabled==false && shopPanel.GetComponent<Image>().enabled==false && painelFade.GetComponent<Image>().enabled==false   ) {
 
 			if (Input.GetKey (KeyCode.DownArrow)) {
 				transform.Translate (0, -.1f, 0);

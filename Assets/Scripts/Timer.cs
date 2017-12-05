@@ -6,8 +6,12 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour {
 	public Text Tempo;
 	public float segundos, minutos, horas;
-//	public GameObject _fundo; 
-//	public GameObject _cor;
+	public Text Data;
+	public int dia, meses, anos;
+
+
+	//	public GameObject _fundo; 
+	//	public GameObject _cor;
 
 	// Use this for initialization
 	void Start () {
@@ -17,7 +21,7 @@ public class Timer : MonoBehaviour {
 		//_cor = _fundo.GetComponent<Color> ();
 
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		segundos += Time.deltaTime;
@@ -36,6 +40,16 @@ public class Timer : MonoBehaviour {
 			_cor.color = Color.black;
 		}*/
 
-
+		Data.text = dia.ToString ("00") + ":" + meses.ToString ("00") + ":" + anos.ToString ("0000");
+		if (horas >= 24) {
+			dia++;
+		} if (dia > 31) {
+			meses++;
+			dia = 1;
+		}
 	}
-}
+
+
+
+
+} 

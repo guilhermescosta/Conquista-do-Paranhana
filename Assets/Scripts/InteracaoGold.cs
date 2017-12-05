@@ -7,12 +7,11 @@ public class InteracaoGold : MonoBehaviour {
 	public bool vAction;
 	public SpriteRenderer sr2;
 	public Sprite sTronco;
-	public HitArvore somMachado;
-
+	public AudioSource _audio;
 	void Start () {
 		sr2 = GetComponent<SpriteRenderer> ();
 		vAction = true;
-		somMachado = this.GetComponent<HitArvore> ();
+		_audio = GetComponent<AudioSource>();
 	}
 	void OnTriggerEnter2D (Collider2D other) {
 		if (other.gameObject.tag == "Player") {
@@ -32,8 +31,8 @@ public class InteracaoGold : MonoBehaviour {
 			LevelManager.levelManager.SetCoin (50);
 			LevelManager.levelManager.SetSede (5);
 			LevelManager.levelManager.SetFome (10);
-			somMachado.machadoarvore ();
 			vAction = false;
+			_audio.Play();
 		}
 	}
 }
