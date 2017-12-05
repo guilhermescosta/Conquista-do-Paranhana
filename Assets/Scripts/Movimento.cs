@@ -17,6 +17,9 @@ public class Movimento : MonoBehaviour {
 		talkBalloon = GameObject.Find ("Balao");
 		shopPanel = GameObject.Find ("Panel");
 
+		Debug.Log (talkBalloon.GetComponent<Image>().enabled);
+		Debug.Log (shopPanel.GetComponent<Image>().enabled);
+		Debug.Log (painelFade.GetComponent<Image>().enabled);
 	}
 
 	void FixedUpdate () {

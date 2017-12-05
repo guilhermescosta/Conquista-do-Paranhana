@@ -1,12 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\criaçãoPersonagem.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Sleep.cs">
     <Files>
       <File FileName="Assets\Scripts\Timer.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\FloorTriggerZone.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\InteracaoCasa.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\inventario.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\criaçãoPersonagem.cs" Line="25" Column="1" />
+      <File FileName="Assets\Scripts\Sleep.cs" Line="30" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
