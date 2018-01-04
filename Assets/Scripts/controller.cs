@@ -10,7 +10,7 @@ public class controller : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		_inventarioController = inventario.GetComponent<inventario> ();
+//		_inventarioController = inventario.GetComponent<inventario> ();
 		menus = GameObject.FindGameObjectsWithTag("menu");
 		desabilitaINV();
 	}

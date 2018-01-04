@@ -40,12 +40,12 @@ public class InteracaoLoja : MonoBehaviour {
 	}
 
 	void FixedUpdate (){
-	
+
 		if (isShop && Input.GetKeyDown (KeyCode.E) && isShopping==false  ) {		// && indexItem <= itens.Length - 1
-			
+
 			foreach (string index in itens) {
-					phrasesText.text += index + "\n";
-				}
+				phrasesText.text += index + "\n";
+			}
 
 			shopPanel.GetComponent<Image> ().enabled = true;
 			isShopping = true;
@@ -58,13 +58,17 @@ public class InteracaoLoja : MonoBehaviour {
 
 			if (indexItem <= 0) {
 				indexItem = itens.Length - 1;
-				cursorPosition = 10;
-				cursorLoja.GetComponent<RectTransform> ().localPosition = new Vector3 (-150,cursorPosition-20,0);;
+				cursorPosition = 5;
+				cursorLoja.GetComponent<RectTransform> ().localPosition = new Vector3 (-150,cursorPosition,0);//cursorPosition-20
 			} 
 			else {
 				indexItem--;
-				cursorPosition += 30;
+				cursorPosition += 29;
 				cursorLoja.GetComponent<RectTransform> ().localPosition = new Vector3 (-150,cursorPosition,0);
+			}
+			if (cursorPosition == -10)
+			{
+				cursorLoja.GetComponent<RectTransform>().localPosition = new Vector3(-150, 150, 0);
 			}
 		}
 
@@ -73,15 +77,20 @@ public class InteracaoLoja : MonoBehaviour {
 
 			if (indexItem == itens.Length ) {
 				indexItem=0;
-				cursorPosition = 150;
-				cursorLoja.GetComponent<RectTransform> ().localPosition = new Vector3 (-150, cursorPosition+20, 0);
-			
+				cursorPosition = 150; 
+				cursorLoja.GetComponent<RectTransform> ().localPosition = new Vector3 (-150, cursorPosition, 0);//cursorPosition+20
+
 			} else {
 				indexItem++;
-				cursorPosition -= 30;
+				cursorPosition -= 29;
 				cursorLoja.GetComponent<RectTransform> ().localPosition = new Vector3 (-150, cursorPosition, 0);
-				
+
 			}
+			if(cursorPosition == -24)
+			{
+				cursorLoja.GetComponent<RectTransform>().localPosition = new Vector3(-150, 150, 0);
+			}
+
 		}
 
 		if (  Input.GetKeyDown (KeyCode.E) && indexItem >= itens.Length - 1) {

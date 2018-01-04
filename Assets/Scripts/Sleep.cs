@@ -18,7 +18,7 @@ public class Sleep : MonoBehaviour {
 
 	//fade
 	public Image _fade;
-	private bool fadein;
+	public bool fadein;
 	private IEnumerator coroutine;
 
 
