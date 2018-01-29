@@ -11,14 +11,17 @@ public class InteracaoLoja : MonoBehaviour {
 	public Text	phrasesText;
 	public int indexItem;
 	public Text talkText;
-
+	public hitarvore lojaMoeda;
 	public bool isShopping;    // se o jogador estiver com a loja aberta
 	public GameObject cursorLoja;
 	public float cursorPosition;
 
+	public AudioSource _audio;
+
 	void Start(){
 		isShopping = false;
 		cursorPosition = 150;
+		_audio = GetComponent<AudioSource>();
 	}
 
 
@@ -37,29 +40,41 @@ public class InteracaoLoja : MonoBehaviour {
 	}
 
 	void FixedUpdate (){
-	
+
 		if (isShop && Input.GetKeyDown (KeyCode.E) && isShopping==false  ) {		// && indexItem <= itens.Length - 1
-			
+			GameObject thePlayer = GameObject.Find("Player");
+			Movimento playerScript = thePlayer.GetComponent<Movimento>();
+			if (playerScript.isMove) {
+				playerScript.isMove = false;
+			} else {
+				playerScript.isMove = true;
+			}
 			foreach (string index in itens) {
-					phrasesText.text += index + "\n";
-				}
+				phrasesText.text += index + "\n";
+			}
 
 			shopPanel.GetComponent<Image> ().enabled = true;
 			isShopping = true;
 			cursorLoja.SetActive (true);
+
+			_audio.Play();
 		}
 
 		if (Input.GetKeyDown (KeyCode.UpArrow) && isShopping==true) {  
 
 			if (indexItem <= 0) {
 				indexItem = itens.Length - 1;
-				cursorPosition = 10;
-				cursorLoja.GetComponent<RectTransform> ().localPosition = new Vector3 (-150,cursorPosition-20,0);;
+				cursorPosition = 5;
+				cursorLoja.GetComponent<RectTransform> ().localPosition = new Vector3 (-150,cursorPosition,0);//cursorPosition-20
 			} 
 			else {
 				indexItem--;
-				cursorPosition += 30;
+				cursorPosition += 29;
 				cursorLoja.GetComponent<RectTransform> ().localPosition = new Vector3 (-150,cursorPosition,0);
+			}
+			if (cursorPosition == -10)
+			{
+				cursorLoja.GetComponent<RectTransform>().localPosition = new Vector3(-150, 150, 0);
 			}
 		}
 
@@ -68,15 +83,20 @@ public class InteracaoLoja : MonoBehaviour {
 
 			if (indexItem == itens.Length ) {
 				indexItem=0;
-				cursorPosition = 150;
-				cursorLoja.GetComponent<RectTransform> ().localPosition = new Vector3 (-150, cursorPosition+20, 0);
-			
+				cursorPosition = 150; 
+				cursorLoja.GetComponent<RectTransform> ().localPosition = new Vector3 (-150, cursorPosition, 0);//cursorPosition+20
+
 			} else {
 				indexItem++;
-				cursorPosition -= 30;
+				cursorPosition -= 29;
 				cursorLoja.GetComponent<RectTransform> ().localPosition = new Vector3 (-150, cursorPosition, 0);
-				
+
 			}
+			if(cursorPosition == -24)
+			{
+				cursorLoja.GetComponent<RectTransform>().localPosition = new Vector3(-150, 150, 0);
+			}
+
 		}
 
 		if (  Input.GetKeyDown (KeyCode.E) && indexItem >= itens.Length - 1) {
@@ -84,7 +104,9 @@ public class InteracaoLoja : MonoBehaviour {
 			isShopping = false;
 			cursorLoja.SetActive (false);
 			talkText.text="";
-
+			GameObject thePlayer = GameObject.Find("Player");
+			Movimento playerScript = thePlayer.GetComponent<Movimento>();
+			playerScript.isMove = true;
 
 		}
 	}

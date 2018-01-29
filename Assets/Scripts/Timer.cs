@@ -6,18 +6,26 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour {
 	public Text Tempo;
 	public float segundos, minutos, horas;
-//	public GameObject _fundo; 
-//	public GameObject _cor;
+	public Text Data;
+	public int dia, meses, anos;
+
+	public GameObject _noitePanel;
+	public Image _noiteColor;
+
+	public bool isNoite;
+
+
+
+	//	public GameObject _fundo; 
+	//	public GameObject _cor;
 
 	// Use this for initialization
 	void Start () {
-		//Tempo = GetComponent<Text>()as Text;
-
-		//_fundo = GameObject.Find ("Fundo");
-		//_cor = _fundo.GetComponent<Color> ();
-
+		isNoite = false;
+		_noitePanel = GameObject.Find ("Noite");
+		_noiteColor = _noitePanel.GetComponent<Image> ();
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		segundos += Time.deltaTime;
@@ -31,11 +39,24 @@ public class Timer : MonoBehaviour {
 		} else if (horas >= 24) {
 			horas = 0;
 		}
-		/*
-		if (horas > 19 && horas < 6 ) {
-			_cor.color = Color.black;
-		}*/
 
+		// noite
+		if (horas >= 19 && !isNoite ) {
+			_noiteColor.color = new Color (0f, 0f, 0f, .5f);
+			isNoite = true;
+		}
+		// dia
+		if (horas ==6 && isNoite ) {
+			_noiteColor.color = new Color (0f, 0f, 0f, 0f);
+			isNoite = false;
+		}
 
+		Data.text = dia.ToString ("00") + ":" + meses.ToString ("00") + ":" + anos.ToString ("0000");
+		if (horas >= 24) {
+			dia++;
+		} if (dia > 31) {
+			meses++;
+			dia = 1;
+		}
 	}
-}
+} 

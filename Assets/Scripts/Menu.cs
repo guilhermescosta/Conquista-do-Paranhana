@@ -11,10 +11,29 @@ public class Menu : MonoBehaviour {
 	public string options;
 	public string exitGame;
 
+	public GameObject newGamePanel;
+
+	// criar metodo do panel 
+
+	public void ConfirmNewGame(){
+		SceneManager.LoadScene (newGame);
+	}
+
+	public void CancelNewGame(){
+		newGamePanel.SetActive (false);
+	}
+
 	public void NewGame(){
-	
-		//SceneManager.LoadScene (newGame);
-		Debug.Log("NewGamebtn");
+
+		if (PlayerPrefs.GetString ("Nome") == "") {
+			Debug.Log ("vazio");
+			SceneManager.LoadScene (newGame);
+		}
+		else {
+			
+			Debug.Log (PlayerPrefs.GetString ("Nome"));
+			newGamePanel.SetActive (true);
+		}
 	}
 
 	public void LoadGame(){
@@ -34,7 +53,6 @@ public class Menu : MonoBehaviour {
 
 		//SceneManager.LoadScene (exitGame);
 		Debug.Log("ExitGamebtn");
+		Application.Quit ();
 	}
-
-
 }

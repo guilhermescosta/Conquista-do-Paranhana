@@ -9,13 +9,17 @@ public class PassaDeFase : MonoBehaviour {
 	public GameObject _player;
 	public GameObject playerStart;   // posicao de saida
 
+	public int scenarioExit;    // qual entrada do cenario
+
+	public string nextScene;
+
 	// Use this for initialization
 	void Start () {
-		_player = GameObject.Find ("Player");
+		_player = GameObject.FindWithTag ("Player");
 		_mov= _player.GetComponent<Movimento> ();
 
-		if (_mov.exit==1){
-			_player.transform.position = new Vector3 (-4, 0, 0);
+		if (_mov.exit==scenarioExit){
+			_player.transform.position = playerStart.transform.position;
 		}
 	}
 	
@@ -29,8 +33,8 @@ public class PassaDeFase : MonoBehaviour {
 		Debug.Log (other.name);
 		if (other.gameObject.CompareTag("Player"))
 		{
-			_mov.exit = 1;
-			SceneManager.LoadScene (SceneManager.GetActiveScene().buildIndex + 1);
+			_mov.exit = scenarioExit;
+			SceneManager.LoadScene (nextScene);
 
 		}
 	}
