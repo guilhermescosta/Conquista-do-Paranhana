@@ -51,7 +51,7 @@ public class Timer : MonoBehaviour {
 			isNoite = false;
 		}
 
-		Data.text = dia.ToString ("00") + ":" + meses.ToString ("00") + ":" + anos.ToString ("0000");
+		Data.text = dia.ToString ("Dia 00") + meses.ToString ("  Mês 00") + anos.ToString ("  Ano 0000");
 		if (horas >= 24) {
 			dia++;
 		} if (dia > 31) {

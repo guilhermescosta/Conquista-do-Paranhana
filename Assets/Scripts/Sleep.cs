@@ -31,6 +31,9 @@ public class Sleep : MonoBehaviour {
 		fadein = true;
 		_fade.GetComponent <Image> ().enabled = false;
 
+
+
+
 	}
 	//termina o turno e atualiza a barra de vida
 	void FixedUpdate(){

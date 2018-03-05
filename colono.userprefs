@@ -1,10 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Movimento.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Sleep.cs">
     <Files>
-      <File FileName="Assets\Scripts\Sleep.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Movimento.cs" Line="92" Column="2" />
-      <File FileName="Assets\Scripts\controller.cs" Line="14" Column="1" />
+      <File FileName="Assets\SelecionaItem.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlayerData.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Movimento.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\InteracaoNPC.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\InteracaoCasa.cs" Line="32" Column="7" />
+      <File FileName="Assets\Scripts\Sleep.cs" Line="22" Column="32" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

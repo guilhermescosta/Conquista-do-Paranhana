@@ -51,32 +51,36 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CharAnimation.cs" />
-     <Compile Include="Assets\HelpButton.cs" />
-     <Compile Include="Assets\Planta.cs" />
-     <Compile Include="Assets\PlayerData.cs" />
+     <Compile Include="Assets\Plantio.cs" />
      <Compile Include="Assets\Scripts\BotaoSobrenome.cs" />
-     <Compile Include="Assets\Scripts\controller.cs" />
+     <Compile Include="Assets\Scripts\CharAnimation.cs" />
      <Compile Include="Assets\Scripts\CriaPersonagem.cs" />
      <Compile Include="Assets\Scripts\FloorTriggerZone.cs" />
      <Compile Include="Assets\Scripts\HeatlhBar.cs" />
+     <Compile Include="Assets\Scripts\HelpButton.cs" />
      <Compile Include="Assets\Scripts\hitarvore.cs" />
      <Compile Include="Assets\Scripts\InteracaoCasa.cs" />
      <Compile Include="Assets\Scripts\InteracaoGold.cs" />
      <Compile Include="Assets\Scripts\InteracaoLoja.cs" />
      <Compile Include="Assets\Scripts\InteracaoNPC.cs" />
      <Compile Include="Assets\Scripts\InteracaoObjeto.cs" />
-     <Compile Include="Assets\Scripts\inventario.cs" />
-     <Compile Include="Assets\Scripts\item.cs" />
+     <Compile Include="Assets\Scripts\Inventario.cs" />
+     <Compile Include="Assets\Scripts\ItemSelect.cs" />
      <Compile Include="Assets\Scripts\LevelManager.cs" />
      <Compile Include="Assets\Scripts\Menu.cs" />
      <Compile Include="Assets\Scripts\Movimento.cs" />
+     <Compile Include="Assets\Scripts\OLD\OLD_controller.cs" />
+     <Compile Include="Assets\Scripts\OLD\OLD_inventario.cs" />
+     <Compile Include="Assets\Scripts\OLD\OLD_item.cs" />
      <Compile Include="Assets\Scripts\PassaDeFase.cs" />
+     <Compile Include="Assets\Scripts\Planta.cs" />
+     <Compile Include="Assets\Scripts\PlayerData.cs" />
      <Compile Include="Assets\Scripts\Sleep.cs" />
+     <Compile Include="Assets\Scripts\SpawnPlayer.cs" />
      <Compile Include="Assets\Scripts\splashFade.cs" />
      <Compile Include="Assets\Scripts\Timer.cs" />
      <Compile Include="Assets\Scripts\Vegetal.cs" />
-     <Compile Include="Assets\SpawnPlayer.cs" />
+     <Compile Include="Assets\SelecionaItem.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
